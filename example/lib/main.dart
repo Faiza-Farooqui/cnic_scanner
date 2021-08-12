@@ -40,8 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   /// from this package will return a model of CnicModel type
   CnicModel _cnicModel = CnicModel();
 
-  Future<void> scanCard(ImageSource imageSource) async {
-
+  Future<void> scanCnic(ImageSource imageSource) async {
     /// you will need to pass one argument of "ImageSource" as shown here
     CnicModel cnicModel =
         await CnicScanner().scanImage(imageSource: imageSource);
@@ -274,9 +273,9 @@ class _MyHomePageState extends State<MyHomePage> {
             context: context,
             builder: (BuildContext context) {
               return CustomDialogBox(onCameraBTNPressed: () {
-                scanCard(ImageSource.camera);
+                scanCnic(ImageSource.camera);
               }, onGalleryBTNPressed: () {
-                scanCard(ImageSource.gallery);
+                scanCnic(ImageSource.gallery);
               });
             });
       },

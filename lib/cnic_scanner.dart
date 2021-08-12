@@ -7,8 +7,7 @@ import 'package:intl/intl.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'model/cnic_model.dart';
 
-class CnicScanner{
-
+class CnicScanner {
   /// it will pick your image either form Gallery or from Camera
   final ImagePicker _picker = ImagePicker();
 
@@ -39,7 +38,7 @@ class CnicScanner{
     GoogleMlKit.instance.languageModelManager();
     TextDetector textDetector = GoogleMlKit.instance.textDetector();
     final RecognisedText recognisedText =
-    await textDetector.processImage(imageToScan);
+        await textDetector.processImage(imageToScan);
     bool isNameNext = false;
     for (TextBlock block in recognisedText.textBlocks) {
       for (TextLine line in block.textLines) {
@@ -63,7 +62,7 @@ class CnicScanner{
           } else if (selectedText != null &&
               selectedText.length == 10 &&
               ((selectedText.contains("/", 2) &&
-                  selectedText.contains("/", 5)) ||
+                      selectedText.contains("/", 5)) ||
                   (selectedText.contains(".", 2) &&
                       selectedText.contains(".", 5)))) {
             cnicDates.add(selectedText.replaceAll(".", "/"));
@@ -89,7 +88,8 @@ class CnicScanner{
     if (cnicDates.length > 1) {
       cnicDates = sortDateList(dates: cnicDates);
     }
-    if (cnicDates.length == 1 && _cnicDetails.cnicHolderDateOfBirth.length != 10) {
+    if (cnicDates.length == 1 &&
+        _cnicDetails.cnicHolderDateOfBirth.length != 10) {
       _cnicDetails.cnicHolderDateOfBirth = cnicDates[0];
       isFrontScan = true;
       Fluttertoast.showToast(
@@ -98,20 +98,18 @@ class CnicScanner{
           gravity: ToastGravity.BOTTOM,
           backgroundColor: Colors.grey,
           textColor: Colors.white,
-          fontSize: 16.0
-      );
+          fontSize: 16.0);
     } else if (cnicDates.length == 2) {
       _cnicDetails.cnicIssueDate = cnicDates[0];
       _cnicDetails.cnicExpiryDate = cnicDates[1];
-      if(!isFrontScan)
+      if (!isFrontScan)
         Fluttertoast.showToast(
             msg: "Scan Front Side Now",
             toastLength: Toast.LENGTH_SHORT,
             gravity: ToastGravity.BOTTOM,
             backgroundColor: Colors.grey,
             textColor: Colors.white,
-            fontSize: 16.0
-        );
+            fontSize: 16.0);
     } else if (cnicDates.length == 3) {
       _cnicDetails.cnicHolderDateOfBirth = cnicDates[0].replaceAll(".", "/");
       _cnicDetails.cnicIssueDate = cnicDates[1].replaceAll(".", "/");
@@ -124,7 +122,7 @@ class CnicScanner{
         _cnicDetails.cnicExpiryDate.length > 0) {
       print('==================== SMART CARD DETAILS $_cnicDetails');
       return Future.value(_cnicDetails);
-    }else{
+    } else {
       print('==================== OLD CARD DETAILS $_cnicDetails');
       return await scanImage(imageSource: source);
     }
@@ -145,4 +143,3 @@ class CnicScanner{
     return dates;
   }
 }
-

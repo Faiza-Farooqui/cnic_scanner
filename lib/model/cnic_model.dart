@@ -1,4 +1,3 @@
-
 /// this class is used to store data from package and display data on user screen
 
 class CnicModel {
@@ -12,10 +11,15 @@ class CnicModel {
   String toString() {
     var string = '';
     string += _cnicNumber.isEmpty ? "" : 'Cnic Number = $cnicNumber\n';
-    string += _cnicExpiryDate.isEmpty ? "" : 'Cnic Expiry Date = $cnicExpiryDate\n';
-    string += _cnicIssueDate.isEmpty ? "" : 'Cnic Issue Date = $cnicIssueDate\n';
-    string += _cnicHolderName.isEmpty ? "" : 'Cnic Holder Name = $cnicHolderName\n';
-    string += _cnicHolderDateOfBirth.isEmpty ? "" : 'Cnic Holder DoB = $cnicHolderDateOfBirth\n';
+    string +=
+        _cnicExpiryDate.isEmpty ? "" : 'Cnic Expiry Date = $cnicExpiryDate\n';
+    string +=
+        _cnicIssueDate.isEmpty ? "" : 'Cnic Issue Date = $cnicIssueDate\n';
+    string +=
+        _cnicHolderName.isEmpty ? "" : 'Cnic Holder Name = $cnicHolderName\n';
+    string += _cnicHolderDateOfBirth.isEmpty
+        ? ""
+        : 'Cnic Holder DoB = $cnicHolderDateOfBirth\n';
     return string;
   }
 
