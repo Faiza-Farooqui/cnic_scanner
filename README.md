@@ -57,11 +57,11 @@ class CardModel {
 
 Cnic Screen                 |  Custom Dialog                |  Scanned Cnic Data
 :-------------------------:|:-----------------------------:|:-------------------------:
-<img height="380px" src="https://user-images.githubusercontent.com/36657067/129031524-4a83c099-cebc-495c-921b-319a49461a7f.jpeg?raw=true">|<img height="380px" src="https://user-images.githubusercontent.com/36657067/129031276-e42046a7-87cb-452b-8a8f-183e9b17c9a3.jpeg?raw=true">|<img height="380px" src="https://user-images.githubusercontent.com/36657067/129031948-26384da8-12cd-4973-82e2-c06c7f6be7c3.jpeg?raw=true">
+<img height="380px" src="https://user-images.githubusercontent.com/36657067/129031524-4a83c099-cebc-495c-921b-319a49461a7f.jpeg?raw=true">|<img height="380px" src="https://user-images.githubusercontent.com/36657067/129031276-e42046a7-87cb-452b-8a8f-183e9b17c9a3.jpeg?raw=true">|<img height="380px" src="https://user-images.githubusercontent.com/36657067/129034069-93144d80-253e-4d55-94bb-8ab5f3dcfc6b.jpeg?raw=true">
 
 
 ## Developers
-[Faiza Farooqui](https://github.com/Faiza-Farooqui)
+[Faiza Farooqui](https://github.com/Faiza-Farooqui) and
 [Kamran Khan](https://github.com/kamran8545)
 
 ## License
