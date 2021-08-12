@@ -7,7 +7,7 @@ A Flutter package that let's you to scan your CNIC and ID cards and all types of
 Add following dependency in pubspec.yaml file. And add this import to your file.
 
 ```bash
-cnic_scanner:^0.0.1
+cnic_scanner: ^0.0.1
 image_picker: latest version
 
 import 'package:cnic_scanner/cnic_scanner.dart';
@@ -20,7 +20,7 @@ import 'package:cnic_scanner/cnic_scanner.dart';
 // create a obj of CnicModel
 // CnicModel _cnicModel = CnicModel();
 
-// then call this method fron package, our package needs you to pass ImageSource only as an argument
+// then call this method fron package, our package needs you to pass ImageSource as an argument
 // scanImage(imageSource: imageSource) from CnicScanner class
 
 await CnicScanner().scanImage(imageSource: imageSource);                ​
@@ -59,7 +59,7 @@ Cnic Screen                 |  Custom Dialog                |  Scanned Cnic Data
 :-------------------------:|:-----------------------------:|:-------------------------:
 <img height="380px" src="https://user-images.githubusercontent.com/36657067/129031524-4a83c099-cebc-495c-921b-319a49461a7f.jpeg?raw=true">|<img height="380px" src="https://user-images.githubusercontent.com/36657067/129031276-e42046a7-87cb-452b-8a8f-183e9b17c9a3.jpeg?raw=true">|<img height="380px" src="https://user-images.githubusercontent.com/36657067/129034069-93144d80-253e-4d55-94bb-8ab5f3dcfc6b.jpeg?raw=true">
 
-##Demo
+## Demo
 
 Scanned from Gallery        |  Scanned from Camera
 :-------------------------:|:-----------------------------:
