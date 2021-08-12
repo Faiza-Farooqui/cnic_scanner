@@ -59,6 +59,11 @@ Cnic Screen                 |  Custom Dialog                |  Scanned Cnic Data
 :-------------------------:|:-----------------------------:|:-------------------------:
 <img height="380px" src="https://user-images.githubusercontent.com/36657067/129031524-4a83c099-cebc-495c-921b-319a49461a7f.jpeg?raw=true">|<img height="380px" src="https://user-images.githubusercontent.com/36657067/129031276-e42046a7-87cb-452b-8a8f-183e9b17c9a3.jpeg?raw=true">|<img height="380px" src="https://user-images.githubusercontent.com/36657067/129034069-93144d80-253e-4d55-94bb-8ab5f3dcfc6b.jpeg?raw=true">
 
+##Demo
+
+Scanned from Gallery        |  Scanned from Camera
+:-------------------------:|:-----------------------------:
+<img height="380px" src="https://user-images.githubusercontent.com/36657067/129146418-928ccbbf-152c-4c7d-8b8f-89c386dd4d1a.gif?raw=true">|<img height="380px" src="https://user-images.githubusercontent.com/36657067/129147338-58fc55f0-bd9b-477c-9187-09b3d7ec6c82.gif?raw=true">
 
 ## Developers
 [Faiza Farooqui](https://github.com/Faiza-Farooqui) and
