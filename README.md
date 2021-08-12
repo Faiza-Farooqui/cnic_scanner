@@ -18,10 +18,10 @@ import 'package:cnic_scanner/cnic_scanner.dart';
 ```python
 
 // create a obj of CnicModel
-// CnicModel _cnicModel = CnicModel();
+CnicModel _cnicModel = CnicModel();
 
 // then call this method fron package, our package needs you to pass ImageSource as an argument
-// scanImage(imageSource: imageSource) from CnicScanner class
+scanImage(imageSource: imageSource) from CnicScanner class
 
 await CnicScanner().scanImage(imageSource: imageSource);                ​
 ```
