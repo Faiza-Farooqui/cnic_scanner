@@ -1,5 +1,5 @@
 name: cnic_scanner
-description: A package that lets you to scan your CNIC and ID cards and all types of other cards. It support both Android and iOS.
+description: A package that lets you to scan your CNIC and ID cards and all types of other cards. It support both Android and iOS and null safe.
 version: 0.0.2
 homepage: https://github.com/Faiza-Farooqui/cnic_scanner
 
