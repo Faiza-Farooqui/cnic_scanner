@@ -7,7 +7,7 @@ A Flutter package that let's you to scan your CNIC and ID cards and all types of
 Add following dependency in pubspec.yaml file. And add this import to your file.
 
 ```bash
-cnic_scanner: ^0.0.1
+cnic_scanner: latest version
 image_picker: latest version
 
 import 'package:cnic_scanner/cnic_scanner.dart';
