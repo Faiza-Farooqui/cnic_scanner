@@ -1,3 +1,7 @@
-## [0.0.1] - initial release Wednesday, 11 Aug 2021.
+## [0.0.2] -  Wednesday, 11 Aug 2021.
 
-* A package that let's you to scan your CNIC and ID cards and all types of other cards
+* shifted to null safety
+
+## [0.0.1] - initial release Thursday, 12 Aug 2021.
+
+* A package that lets you to scan your CNIC and ID cards and all types of other cards

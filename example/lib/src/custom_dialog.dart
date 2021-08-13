@@ -7,7 +7,7 @@ class CustomDialogBox extends StatefulWidget {
   Function onCameraBTNPressed, onGalleryBTNPressed;
 
   CustomDialogBox(
-      {@required this.onCameraBTNPressed, @required this.onGalleryBTNPressed});
+      {required this.onCameraBTNPressed, required this.onGalleryBTNPressed});
 
   @override
   _CustomDialogBoxState createState() => _CustomDialogBoxState();

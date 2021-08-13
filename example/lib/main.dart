@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   /// these are my custom designs you can use according to your ease
-  Widget _cnicField({@required TextEditingController textEditingController}) {
+  Widget _cnicField({required TextEditingController textEditingController}) {
     return Card(
       elevation: 7,
       margin: const EdgeInsets.only(top: 2.0, bottom: 5.0),
@@ -195,8 +195,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _dataField(
-      {@required String text,
-      @required TextEditingController textEditingController}) {
+      {required String text,
+      required TextEditingController textEditingController}) {
     return Card(
         shadowColor: Color(kShadowColor),
         elevation: 5,

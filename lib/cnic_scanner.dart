@@ -12,7 +12,7 @@ class CnicScanner {
   final ImagePicker _picker = ImagePicker();
 
   /// it will check the image source
-  ImageSource source;
+  late ImageSource source;
 
   /// a model class to store cnic data
   CnicModel _cnicDetails = CnicModel();
@@ -22,9 +22,9 @@ class CnicScanner {
   bool isFrontScan = false;
 
   /// this method will be called when user uses this package
-  Future<CnicModel> scanImage({@required ImageSource imageSource}) async {
+  Future<CnicModel> scanImage({required ImageSource imageSource}) async {
     source = imageSource;
-    PickedFile image = await _picker.getImage(source: imageSource);
+    XFile? image = await _picker.pickImage(source: imageSource);
     if (image == null) {
       return Future.value(_cnicDetails);
     } else {
@@ -33,27 +33,26 @@ class CnicScanner {
   }
 
   /// this method will process the images and extract information from the card
-  Future<CnicModel> scanCnic({InputImage imageToScan}) async {
+  Future<CnicModel> scanCnic({required InputImage imageToScan}) async {
     List<String> cnicDates = [];
-    GoogleMlKit.instance.languageModelManager();
-    TextDetector textDetector = GoogleMlKit.instance.textDetector();
-    final RecognisedText recognisedText =
-        await textDetector.processImage(imageToScan);
+    GoogleMlKit.vision.languageModelManager();
+    TextDetector textDetector = GoogleMlKit.vision.textDetector();
+    final RecognisedText recognisedText = await textDetector.processImage(imageToScan);
     bool isNameNext = false;
-    for (TextBlock block in recognisedText.textBlocks) {
-      for (TextLine line in block.textLines) {
+    for (TextBlock block in recognisedText.blocks) {
+      for (TextLine line in block.lines) {
         if (isNameNext) {
-          _cnicDetails.cnicHolderName = line.lineText;
+          _cnicDetails.cnicHolderName = line.text;
           isNameNext = false;
         }
-        if (line.lineText.toLowerCase() == "name" ||
-            line.lineText.toLowerCase() == "nane" ||
-            line.lineText.toLowerCase() == "nam" ||
-            line.lineText.toLowerCase() == "ame") {
+        if (line.text.toLowerCase() == "name" ||
+            line.text.toLowerCase() == "nane" ||
+            line.text.toLowerCase() == "nam" ||
+            line.text.toLowerCase() == "ame") {
           isNameNext = true;
         }
-        for (TextElement element in line.textElements) {
-          String selectedText = element.getText;
+        for (TextElement element in line.elements) {
+          String selectedText = element.text;
           if (selectedText != null &&
               selectedText.length == 15 &&
               selectedText.contains("-", 5) &&
@@ -129,7 +128,7 @@ class CnicScanner {
   }
 
   /// it will sort the dates
-  static List<String> sortDateList({@required List<String> dates}) {
+  static List<String> sortDateList({required List<String> dates}) {
     List<DateTime> tempList = [];
     DateFormat format = DateFormat("dd/MM/yyyy");
     for (int i = 0; i < dates.length; i++) {
