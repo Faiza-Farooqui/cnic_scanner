@@ -37,7 +37,8 @@ class CnicScanner {
     List<String> cnicDates = [];
     GoogleMlKit.vision.languageModelManager();
     TextDetector textDetector = GoogleMlKit.vision.textDetector();
-    final RecognisedText recognisedText = await textDetector.processImage(imageToScan);
+    final RecognisedText recognisedText =
+        await textDetector.processImage(imageToScan);
     bool isNameNext = false;
     for (TextBlock block in recognisedText.blocks) {
       for (TextLine line in block.lines) {
