@@ -6,7 +6,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'model/cnic_model.dart';
-import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 
 class CnicScanner {
   /// it will pick your image either form Gallery or from Camera
@@ -55,13 +54,11 @@ class CnicScanner {
         }
         for (TextElement element in line.elements) {
           String selectedText = element.text;
-          if (selectedText != null &&
-              selectedText.length == 15 &&
+          if (selectedText.length == 15 &&
               selectedText.contains("-", 5) &&
               selectedText.contains("-", 13)) {
             _cnicDetails.cnicNumber = selectedText;
-          } else if (selectedText != null &&
-              selectedText.length == 10 &&
+          } else if (selectedText.length == 10 &&
               ((selectedText.contains("/", 2) &&
                       selectedText.contains("/", 5)) ||
                   (selectedText.contains(".", 2) &&
