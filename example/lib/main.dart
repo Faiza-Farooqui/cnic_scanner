@@ -264,9 +264,13 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _getScanCNICBtn() {
-    return RaisedButton(
-      elevation: 5,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        elevation: 5,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        textStyle: TextStyle(color: Colors.white),
+          padding: EdgeInsets.all(0.0),
+    ),
       onPressed: () {
         /// this is the custom dialog that takes 2 arguments "Camera" and "Gallery"
         showDialog(
@@ -279,8 +283,8 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             });
       },
-      textColor: Colors.white,
-      padding: EdgeInsets.all(0.0),
+      // textColor: Colors.white,
+      // padding: EdgeInsets.all(0.0),
       child: Container(
         alignment: Alignment.center,
         width: 500,

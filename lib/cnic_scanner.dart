@@ -6,6 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'model/cnic_model.dart';
+import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 
 class CnicScanner {
   /// it will pick your image either form Gallery or from Camera
@@ -35,9 +36,9 @@ class CnicScanner {
   /// this method will process the images and extract information from the card
   Future<CnicModel> scanCnic({required InputImage imageToScan}) async {
     List<String> cnicDates = [];
-    GoogleMlKit.vision.languageModelManager();
-    TextDetector textDetector = GoogleMlKit.vision.textDetector();
-    final RecognisedText recognisedText =
+    // GoogleMlKit.vision.languageModelManager();
+    TextRecognizer textDetector = GoogleMlKit.vision.textRecognizer();
+    final RecognizedText recognisedText =
         await textDetector.processImage(imageToScan);
     bool isNameNext = false;
     for (TextBlock block in recognisedText.blocks) {

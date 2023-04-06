@@ -61,7 +61,7 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  FlatButton(
+                  TextButton(
                       onPressed: () {
                         Navigator.pop(context);
                         widget.onCameraBTNPressed();
@@ -71,7 +71,7 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
                         style: TextStyle(
                             fontSize: 18, color: Color(kDeepDarkGreenColor)),
                       )),
-                  FlatButton(
+                  TextButton(
                       onPressed: () {
                         Navigator.pop(context);
                         widget.onGalleryBTNPressed();
